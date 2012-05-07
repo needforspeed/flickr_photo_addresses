@@ -1,0 +1,41 @@
+body {
+	width:600px;
+	overflow-x:hidden;
+}
+
+fieldset {
+	width: 90%;
+	margin: 20px auto 40px;
+}
+
+.hide {
+	display: none;
+}
+
+#table_holder {
+	width: 90%;
+	margin: 20px auto 40px;
+	float: none;
+	border-radius: 10px;
+}
+
+#table_holder table {
+	border-spacing: 0;
+}
+
+#table_holder table tr th{
+	vertical-align: middle;
+	border-collapse: collapse;
+	margin:0;
+} 
+#table_holder table tr td{
+	vertical-align: middle ;
+	border-collapse: collapse;
+	margin:0;
+	padding:0;
+	/*
+	height:75px;
+	*/
+	height: 18px;
+}
+

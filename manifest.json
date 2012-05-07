@@ -1,0 +1,23 @@
+{
+  "name": "flickr mitbbs",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "The extension is made to retrieve flickr photo address for mitbbs users in their posts",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.flickr.com/*"],
+      "css" : ["mystyles.css"],
+      "js": ["jquery.js"]
+    }
+  ],
+  "permissions": [
+    "http://api.flickr.com/",
+    "http://www.flickr.com/",
+    "http://ajax.googleapis.com/",
+    "tabs"
+  ]
+}

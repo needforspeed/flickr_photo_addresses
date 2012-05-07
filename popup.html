@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flick Photo link extension</title>
+    <!-- JavaScript and HTML must be in separate files for security. -->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+    <link type="text/css" rel="stylesheet" href="mystyles.css" />
+  </head>
+  <body>
+    <fieldset>
+      <legend>
+        Size
+      </legend>
+      <label for="size">Small</label>
+      <input type="radio" name="size" value="s" />
+      <label for="size">Medium</label>
+      <input type="radio" name="size" value="z" />
+      <label for="size">Large</label>
+      <input type="radio" name="size" value="b" />
+    </fieldset>
+    <div>
+      <h3>
+        links
+      </h3>
+      <div id="processing">
+        Processing
+      </div>
+      <div  id="links_holder">
+      </div>
+    </div>
+  </body>
+</html>
