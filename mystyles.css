@@ -8,6 +8,11 @@ fieldset {
 	margin: 20px auto 40px;
 }
 
+body>div{
+	width: 90%;
+	margin: 20px auto 40px;
+}
+
 .hide {
 	display: none;
 }
@@ -39,3 +44,12 @@ fieldset {
 	height: 18px;
 }
 
+.small {
+	color:red;
+}
+.medium{
+	color:green;
+}
+.large{
+	color:blue;
+}
