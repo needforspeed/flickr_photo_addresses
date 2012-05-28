@@ -44,6 +44,12 @@ body>div{
 	height: 18px;
 }
 
+#na
+{
+	color:red;
+	font-weight:bold;
+}
+
 .small {
 	color:red;
 }
