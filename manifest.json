@@ -10,14 +10,15 @@
   "content_scripts": [
     {
       "matches": ["http://www.flickr.com/*"],
-      "css" : ["mystyles.css"],
-      "js": ["jquery.js"]
+      "js": ["jquery.js","popup.js"],
+      "run_at": "document_end"
     }
   ],
   "permissions": [
     "http://api.flickr.com/",
     "http://www.flickr.com/",
-    "http://ajax.googleapis.com/",
     "tabs"
-  ]
+  ],
+  "web_accessible_resources" : ["jquery.js"]
 }
+
