@@ -59,3 +59,11 @@ body>div{
 .large{
 	color:blue;
 }
+
+input[type='checkbox']{
+    margin-left: 20px;
+}
+
+input[type='radio']{
+    margin-left: 5px;
+}
