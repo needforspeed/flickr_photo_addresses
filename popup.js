@@ -45,7 +45,7 @@ myFlickr.prototype.ready = function ( o )
     }
   );
 
-  $('input:radio').bind
+  $('input').bind
   (
     'click', 
     function () 
@@ -93,11 +93,19 @@ myFlickr.prototype.show = function ()
 
   $('#links_holder').html('');
 
-  self.img_size = $('input:checked').val();
+  self.img_size = $('input.size:checked').val();
+  self.photo_number = $('input#photo-number')[0].checked
+  self.space_between_lines = $('input#space-between-lines')[0].checked
 
   for (var i = 0; i < self.image_elems.orig.length; i++)
   {
-    $('#links_holder').append('<div>' + self.image_elems[self.img_size][i] + '</div>');
+      if(self.photo_number){
+          $('#links_holder').append('<label>'+ (i + 1) + '</label>')
+      }
+      $('#links_holder').append('<div>' + self.image_elems[self.img_size][i] + '</div>');
+      if(self.space_between_lines){
+          $('#links_holder').append('<br /><br /><br /><br />')
+      }
   };
   
   $('#processing').addClass("hide");

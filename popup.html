@@ -9,15 +9,26 @@
   <body>
     <fieldset>
       <legend>
-        Size
+        Options
       </legend>
+      <input type="radio" class="size" name="size" value="s" />
       <label for="size" class="small">Small</label>
-      <input type="radio" name="size" value="s" />
+      <input type="radio" class="size" name="size" value="m" checked="checked" />
       <label for="size" class="medium">Medium</label>
-      <input type="radio" name="size" value="m" checked="checked" />
+      <input type="radio" class="size" name="size" value="l" />
       <label for="size" class="large">Large</label>
-      <input type="radio" name="size" value="l" />
+
+      <input type="checkbox" id="photo-number" />
+      <label>
+        Photo Number
+      </label>
+
+      <input type="checkbox" id="space-between-lines" />
+      <label>
+        Space Between Lines
+      </label>
     </fieldset>
+
     <div>
       <h3>
         <span id="image_size"></span> links
