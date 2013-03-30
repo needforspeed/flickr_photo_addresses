@@ -1,6 +1,6 @@
 {
   "name": "flickr mitbbs",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 2,
   "description": "The extension is made to retrieve flickr photo address, with improved user experience from Kailuo",
   "browser_action": {

@@ -26,9 +26,9 @@ myFlickr.prototype.ready = function ( o )
     {
       self.url = sender.tab.url;
 
-      if(sender.tab.url=='http://www.flickr.com/photos/organize/')
+      if(sender.tab.url.substring(0, 37)=='http://www.flickr.com/photos/organize')
       {
-        self.image_elems.orig = $(request.content).find("div.batch_photo img");
+        self.image_elems.orig = $(request.content).find("#batch_photos_div .batch_photo img");
       }
       else
       {
@@ -54,12 +54,12 @@ myFlickr.prototype.ready = function ( o )
     }
   );
 
-  chrome.tabs.getSelected
+  chrome.tabs.query
   (
-    null,
+    {active:true},
     function(tab)
     {
-      if(tab.url.substring(0, 21) != 'http://www.flickr.com')
+      if(tab[0].url.substring(0, 21) != 'http://www.flickr.com')
       {
         self.show();
         return;
@@ -67,7 +67,7 @@ myFlickr.prototype.ready = function ( o )
 
       chrome.tabs.executeScript
       (
-        tab.id, 
+        tab[0].id, 
         {
           "code":"chrome.extension.sendRequest({\"content\":document.body.innerHTML})"
         }
