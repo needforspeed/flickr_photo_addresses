@@ -26,7 +26,7 @@ myFlickr.prototype.ready = function ( o )
     {
       self.url = sender.tab.url;
 
-      if(sender.tab.url.substring(0, 37)=='http://www.flickr.com/photos/organize')
+      if(sender.tab.url.indexOf('flickr.com/photos/organize') >= 0 )
       {
         self.image_elems.orig = $(request.content).find("#batch_photos_div .batch_photo img");
       }
